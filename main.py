@@ -2,9 +2,8 @@ from RiotApi import RiotApi
 from dotenv import load_dotenv
 import os
 
-def get_lol_stats(summonerName):
-    load_dotenv()
-    riotApi = RiotApi(os.getenv('RIOT_API_KEY'))
+def get_lol_stats(summonerName, api):
+    riotApi = RiotApi(api)
 
     match = riotApi.get_latest_matches_by_name(summonerName)
     matchId = match['metadata']['matchId']
@@ -48,7 +47,8 @@ def get_lol_stats(summonerName):
         print('participant: {}\n'.format(riotApi.get_summoner_by_puuid(participant)))'''
     
 def main():
-    get_lol_stats('Admin Ben')
+    load_dotenv()
+    get_lol_stats('Admin Ben', os.getenv('RIOT_API_KEY'))
     
 if __name__ == '__main__':
     main()
