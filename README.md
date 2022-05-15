@@ -1,5 +1,5 @@
 <h3 align="center">Riot-LoL</h3>
-<p align="center">Query Riot League of Legends statistic data</p>
+<p align="center">Query Riot League of Legends statistic</p>
 
 
 <!-- TABLE OF CONTENTS -->
@@ -18,4 +18,5 @@
 <!-- PREREQUISITE -->
 ## Prerequisite
 
+### Riot
 An API from [Riot Developer Portal](https://developer.riotgames.com/)
